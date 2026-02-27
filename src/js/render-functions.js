@@ -14,17 +14,24 @@ export function createGallery(images) {
   const markup = images
     .map(
       img => `
-<a class="gallery__link" href="${img.largeImageURL}">
-        <div class="photo-card">
-          <img class="photo-card__img" src="${img.webformatURL}" alt="${img.tags}" loading="lazy" />
-          <div class="info">
-            <p class="info-item"><b>Likes</b><span>${img.likes}</span></p>
-            <p class="info-item"><b>Views</b><span>${img.views}</span></p>
-            <p class="info-item"><b>Comments</b><span>${img.comments}</span></p>
-            <p class="info-item"><b>Downloads</b><span>${img.downloads}</span></p>
-          </div>
-        </div>
-      </a>
+ <li class="gallery-item">
+          <a class="gallery__link" href="${img.largeImageURL}">
+            <div class="photo-card">
+              <img
+                class="photo-card__img"
+                src="${img.webformatURL}"
+                alt="${img.tags}"
+                loading="lazy"
+              />
+              <div class="info">
+                <p class="info-item"><b>Likes</b><span>${img.likes}</span></p>
+                <p class="info-item"><b>Views</b><span>${img.views}</span></p>
+                <p class="info-item"><b>Comments</b><span>${img.comments}</span></p>
+                <p class="info-item"><b>Downloads</b><span>${img.downloads}</span></p>
+              </div>
+            </div>
+          </a>
+        </li>
 `
     )
     .join('');

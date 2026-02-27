@@ -6,12 +6,17 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
-  margin-top: 20px;
+
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
 }
 
 .photo-card {
   border: 1px solid #ddd;
   padding: 8px;
+  background-color: #fff;
+  border-radius: 8px;
 }
 
 .photo-card__img {
@@ -29,7 +34,7 @@
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
-.search-form {
+.form {
   display: flex;
   justify-content: center; /* центрує по горизонталі */
   align-items: center;
@@ -37,7 +42,7 @@
   margin-bottom: 30px;
   margin-top: 36px;
 }
-.search-form input {
+.form input {
   width: 272px;
   height: 40px;
   padding: 8px 12px;
@@ -45,7 +50,7 @@
   border-radius: 4px;
   outline: none;
 }
-.search-form button {
+.form button {
   height: 40px;
   padding: 0 16px;
   background-color: #4e75ff;
@@ -55,7 +60,7 @@
   cursor: pointer;
 }
 
-.search-form button:hover {
+.form button:hover {
   background-color: #6c8cff;
 }
 
